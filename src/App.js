@@ -20,20 +20,20 @@ function App() {
 		<div className="App">
 			<Navigation cart={cart} />
 
-			<ProductContext>
+			<ProductContext.Provider products ={products} addItem={addItem}>
 				{/* Routes */}
 				<Route
 					exact
 					path="/"
 					render={() => (
 						<Products
-							products={products}
-							addItem={addItem}
+						// products={products}
+						// addItem={addItem}
 						/>
 					)}
 				/>
 
-			</ProductContext>
+			</ProductContext.Provider>
 
 			<Route
 				path="/cart"
