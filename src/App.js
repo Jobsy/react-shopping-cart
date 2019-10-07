@@ -19,24 +19,10 @@ function App() {
 
   return (
     <div className="App">
-
-
       <ProductContext.Provider value={{ products, addItem }}>
         <CartContext.Provider value={cart}>
           <Navigation />
 
-          {/* <Navigation cart={cart} /> */}
-          {/* Routes */}
-          {/* <Route
-					exact
-					path="/"
-					render={() => (
-						<Products
-						// products={products}
-						// addItem={addItem}
-						/>
-					)}
-				/> */}
           <Route
             exact
             path="/"
@@ -47,20 +33,8 @@ function App() {
             path="/cart"
             component={ShoppingCart}
           />
-
-          {/* <Route
-            path="/cart"
-            render={() => <ShoppingCart cart={cart} />}
-          /> */}
-
-
         </CartContext.Provider>
       </ProductContext.Provider>
-
-      {/* <Route
-        path="/cart"
-        render={() => <ShoppingCart cart={cart} />}
-      /> */}
     </div>
   );
 }
